@@ -1,4 +1,4 @@
-Live4 - SAP HANA Cloud Platform
-===============================
+Live 4 - ERP Agile Solutions in SAP HANA Cloud Platform
+=======================================================
 
-SAP HANA Academy - Live4 project code samples for playlist https://www.youtube.com/playlist?list=000000000
+SAP HANA Academy - Live4 project code samples for playlist https://www.youtube.com/playlist?list=PLkzo92owKnVwKtQjVq_-HxWnOppFATOQc
