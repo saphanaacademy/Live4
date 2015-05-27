@@ -1,17 +1,15 @@
--- grant schema for live 4 videos --
+------------
+-- TUNNEL --
+------------
+
 neo grant-schema-access -i ??? -a ??? -h ??? -u ??? -b ???
 
 ------------
--- tunnel --
+-- GRANTS --
 ------------
 
-select distinct role_name from granted_roles where role_name like 'NEO_%';
-
-------------
--- tunnel --
-------------
-
-grant INSERT, UPDATE, DELETE on schema live4 to "???";
+SELECT DISTINCT ROLE_NAME FROM GRANTED_ROLES WHERE ROLE_NAME LIKE 'NEO_%';
+GRANT INSERT, UPDATE, DELETE ON SCHEMA LIVE4 TO "???";
 
 ----------
 -- VBAP --
