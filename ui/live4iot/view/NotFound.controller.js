@@ -1,0 +1,1 @@
+sap.ui.core.mvc.Controller.extend("live4IoT.view.NotFound", {});

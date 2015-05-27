@@ -1,0 +1,16 @@
+{
+  "run": [
+    {
+      "filePath": "/live4/index.html",
+      "previewMode": 0,
+      "dataMode": 1,
+      "workspace": "withoutWorkspace",
+      "urlParameters": [],
+      "_metadata": {
+        "runnerId": "webapprunner",
+        "id": 3419934,
+        "displayName": "New Web Application"
+      }
+    }
+  ]
+}

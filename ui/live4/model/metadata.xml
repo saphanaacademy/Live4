@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<edmx:Edmx Version="1.0"
+    xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+    <edmx:DataServices
+        xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" m:DataServiceVersion="2.0">
+        <Schema Namespace="live4.services"
+            xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices"
+            xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+            xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="StoresType">
+                <Key>
+                    <PropertyRef Name="ROWNUM" />
+                </Key>
+                <Property Name="ROWNUM" Type="Edm.Int32" Nullable="false" />
+                <Property Name="MANDT" Type="Edm.String" MaxLength="3" />
+                <Property Name="WERKS" Type="Edm.String" MaxLength="4" />
+                <Property Name="NAME1" Type="Edm.String" MaxLength="30" />
+                <Property Name="NAME2" Type="Edm.String" MaxLength="30" />
+                <Property Name="STRAS" Type="Edm.String" MaxLength="35" />
+                <Property Name="ORT01" Type="Edm.String" MaxLength="25" />
+                <Property Name="REGIO" Type="Edm.String" MaxLength="3" />
+                <Property Name="LAND1" Type="Edm.String" MaxLength="3" />
+                <Property Name="PSTLZ" Type="Edm.String" MaxLength="10" />
+                <Property Name="AQI" Type="Edm.Int32" />
+                <Property Name="TMP" Type="Edm.Int32" />
+                <Property Name="HUM" Type="Edm.Int32" />
+                <Property Name="WS_AQI_SITENUM" Type="Edm.Int32" />
+                <Property Name="WS_AQI_LONGITUDE" Type="Edm.Double" />
+                <Property Name="WS_AQI_LATITUDE" Type="Edm.Double" />
+                <Property Name="WS_AQI_DISTANCE" Type="Edm.Double" />
+                <Property Name="WS_TMP_SITENUM" Type="Edm.Int32" />
+                <Property Name="WS_TMP_LONGITUDE" Type="Edm.Double" />
+                <Property Name="WS_TMP_LATITUDE" Type="Edm.Double" />
+                <Property Name="WS_TMP_DISTANCE" Type="Edm.Double" />
+                <Property Name="WS_HUM_SITENUM" Type="Edm.Int32" />
+                <Property Name="WS_HUM_LONGITUDE" Type="Edm.Double" />
+                <Property Name="WS_HUM_LATITUDE" Type="Edm.Double" />
+                <Property Name="WS_HUM_DISTANCE" Type="Edm.Double" />
+                <NavigationProperty Name="Products" Relationship="live4.services.Store2ProductsType" FromRole="StoresPrincipal" ToRole="ProductsDependent" />
+            </EntityType>
+            <EntityType Name="ProductsType">
+                <Key>
+                    <PropertyRef Name="ID" />
+                </Key>
+                <Property Name="ID" Type="Edm.String" Nullable="false" MaxLength="2147483647" />
+                <Property Name="WERKS" Type="Edm.String" MaxLength="4" />
+                <Property Name="MATNR" Type="Edm.String" MaxLength="18" />
+                <Property Name="MAKTX" Type="Edm.String" Nullable="false" DefaultValue="" MaxLength="40" />
+                <Property Name="INVENTORY" Type="Edm.Int32" />
+                <Property Name="QUANTITY_PREDICTED" Type="Edm.Int32" />
+                <Property Name="INVENTORY_PREDICTED_SPARE" Type="Edm.Int32" />
+                <NavigationProperty Name="Sales" Relationship="live4.services.Product2SalesType" FromRole="ProductsPrincipal" ToRole="SalesDependent" />
+            </EntityType>
+            <EntityType Name="SalesType">
+                <Key>
+                    <PropertyRef Name="ROW_NUM" />
+                </Key>
+                <Property Name="ROW_NUM" Type="Edm.Int64" Nullable="false" />
+                <Property Name="MANDT" Type="Edm.String" MaxLength="3" />
+                <Property Name="ERDAT" Type="Edm.DateTime" />
+                <Property Name="WERKS" Type="Edm.String" MaxLength="4" />
+                <Property Name="MATNR" Type="Edm.String" DefaultValue="" MaxLength="18" />
+                <Property Name="QUANTITY" Type="Edm.Decimal" Precision="18" Scale="3" />
+                <Property Name="SALES_TOTAL" Type="Edm.Decimal" Precision="10" Scale="0" />
+                <Property Name="AQI" Type="Edm.String" MaxLength="2048" />
+                <Property Name="AQI_RANGE" Type="Edm.Decimal" Precision="34" />
+                <Property Name="LEVEL_OHC" Type="Edm.String" Nullable="false" MaxLength="30" />
+                <Property Name="COLOUR" Type="Edm.String" Nullable="false" MaxLength="6" />
+                <Property Name="TMP" Type="Edm.Single" />
+                <Property Name="HUM" Type="Edm.Single" />
+            </EntityType>
+            <Association Name="Store2ProductsType">
+                <End Type="live4.services.StoresType" Role="StoresPrincipal" Multiplicity="1"/>
+                <End Type="live4.services.ProductsType" Role="ProductsDependent" Multiplicity="*"/>
+            </Association>
+            <Association Name="Product2SalesType">
+                <End Type="live4.services.ProductsType" Role="ProductsPrincipal" Multiplicity="1"/>
+                <End Type="live4.services.SalesType" Role="SalesDependent" Multiplicity="*"/>
+            </Association>
+            <EntityContainer Name="services" m:IsDefaultEntityContainer="true">
+                <EntitySet Name="Stores" EntityType="live4.services.StoresType" />
+                <EntitySet Name="Products" EntityType="live4.services.ProductsType" />
+                <EntitySet Name="Sales" EntityType="live4.services.SalesType" />
+                <AssociationSet Name="Store2Products" Association="live4.services.Store2ProductsType">
+                    <End Role="StoresPrincipal" EntitySet="Stores"/>
+                    <End Role="ProductsDependent" EntitySet="Products"/>
+                </AssociationSet>
+                <AssociationSet Name="Product2Sales" Association="live4.services.Product2SalesType">
+                    <End Role="ProductsPrincipal" EntitySet="Products"/>
+                    <End Role="SalesDependent" EntitySet="Sales"/>
+                </AssociationSet>
+            </EntityContainer>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

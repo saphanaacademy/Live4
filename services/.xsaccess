@@ -1,0 +1,5 @@
+{
+ "exposed": true,
+ "authentication": [{"method": "Form"}],
+ "authorization": ["live4::Execute"]
+}

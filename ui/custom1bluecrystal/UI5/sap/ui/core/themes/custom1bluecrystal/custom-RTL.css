@@ -1,0 +1,71 @@
+/**
+* Copyright (c) 2013 SAP AG, All Rights Reserved
+*
+* Theming Engine 1.10.0
+* data:{"Path": "UI5.sap/ui/core.custom1bluecrystal.custom", "PathPattern": "/%frameworkId%/%libId%/themes/%themeId%/%fileId%.css", "Version": { "Build":"1.26.8.20150507111049", "Source": "1.26.8", "Engine": "1.10.0"}}
+*/
+
+
+.sapMObjLNumberStateSuccess {
+  color: #008000;
+}
+.sapMOHNumberStateSuccess {
+  color: #008000;
+}
+.sapMObjStatusSuccess > .sapMObjStatusText {
+  color: #008000;
+}
+.sapMObjLNumberStateWarning {
+  color: #ffa500;
+}
+.sapMOHNumberStateWarning {
+  color: #ffa500;
+}
+.sapMObjStatusWarning > .sapMObjStatusText {
+  color: #ffa500;
+}
+.sapMObjLNumberStateError {
+  color: #ff0000;
+}
+.sapMOHNumberStateError {
+  color: #ff0000;
+}
+.sapMObjStatusError > .sapMObjStatusText {
+  color: #ff0000;
+}
+.sapMObjLNumberStateNone {
+  color: #800000;
+}
+.sapMOHNumberStateNone {
+  color: #800000;
+}
+.sapMObjStatusNone > .sapMObjStatusText {
+  color: #800000;
+}
+.sapUshellDynamicTile .sapUshellDynamicTileData.sapUshellDynamicTileDataPositive {
+  color: #008000;
+}
+.sapUshellDynamicTile .sapUshellDynamicTileData.sapUshellDynamicTileDataCritical {
+  color: #ffa500;
+}
+.sapUshellDynamicTile .sapUshellDynamicTileData.sapUshellDynamicTileDataNegative {
+  color: #ff0000;
+}
+.sapUshellDynamicTile .sapUshellDynamicTileData.sapUshellDynamicTileDataNeutral {
+  color: #800000;
+}
+.sapUshellTileBase .sapUshellTileBaseInfo.sapUshellTileBasePositive {
+  color: #008000;
+}
+.sapUshellTileBase .sapUshellTileBaseInfo.sapUshellTileBaseCritical {
+  color: #ffa500;
+}
+.sapUshellTileBase .sapUshellTileBaseInfo.sapUshellTileBaseNegative {
+  color: #ff0000;
+}
+.sapUshellTileBase .sapUshellTileBaseInfo.sapUshellTileBaseNeutral {
+  color: #800000;
+}
+.sapThemeMetaData-UI5-sap-ui-core {
+  background-image: url('data:text/plain;utf-8,{"Path": "UI5.sap/ui/core.custom1bluecrystal.custom", "PathPattern": "/%frameworkId%/%libId%/themes/%themeId%/%fileId%.css", "Version": {"Build":"1.26.8.20150507111049", "Source": "1.26.8", "Engine": "1.10.0"}}');
+}

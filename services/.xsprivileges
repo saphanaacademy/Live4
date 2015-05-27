@@ -1,0 +1,5 @@
+{
+ "privileges": [
+  {"name": "Execute", "description": "Execute"}
+ ]
+}

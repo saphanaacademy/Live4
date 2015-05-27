@@ -1,0 +1,155 @@
+<mvc:View 
+    controllerName="live4IoT.view.Detail"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form">
+    <Page
+        id="detailPage" 
+        navButtonPress="onNavBack" 
+        title="{i18n>detailTitle}" 
+        showNavButton="{device>/isPhone}">
+        <content>
+            <ObjectHeader 
+                id="detailHeader" 
+				title="CBSA {ORT01}" 
+				number="{AQI}"
+				numberState="{
+                      path: 'AQI',
+                      formatter: 'live4IoT.util.Formatter.AQIState'
+                    }"
+				numberUnit="AQI"
+                introActive="false" 
+                titleActive="false" 
+                iconActive="false">
+                <customData 
+                    id="customData3">
+                    <core:CustomData 
+                        id="coreCustomData3" 
+                        key="sapDtResourcePath" 
+                        value="Stores">
+                    </core:CustomData>
+                </customData>
+                <firstStatus
+                    id="detailStatus">
+                    <ObjectStatus 
+                        text="{
+                          path: 'AQI',
+                          formatter: 'live4IoT.util.Formatter.AQIText'
+                        }"
+                        state="{
+                          path: 'AQI',
+                          formatter: 'live4IoT.util.Formatter.AQIState'
+                        }"
+                    />
+                </firstStatus>
+                <attributes id="detailAttributes">
+                  <ObjectAttribute text="{
+                          path: 'TMP',
+                          formatter: 'live4IoT.util.Formatter.TMPText'
+                        }" />
+                  <ObjectAttribute text="{
+                          path: 'HUM',
+                          formatter: 'live4IoT.util.Formatter.HUMText'
+                        }" />
+                </attributes>
+            </ObjectHeader>
+            <IconTabBar 
+                id="idIconTabBar" 
+                expanded="{device>/isNoPhone}">
+                <customData 
+                    id="customData5">
+                    <core:CustomData 
+                        id="coreCustomData5" 
+                        key="sapDtResourcePath" 
+                        value="Stores">
+                    </core:CustomData>
+                </customData>
+    			<items 
+    			    id="detailsItems">
+                    <IconTabFilter 
+                        id="iconTabFilter1" 
+                        key="selfInfo" 
+                        icon="sap-icon://web-cam">
+                        <content>
+							<f:SimpleForm 
+								id="iconTabFilter1form" 
+								minWidth="1024" 
+								editable="false" 
+								layout="ResponsiveGridLayout" 
+								labelSpanL="3" 
+								labelSpanM="3" 
+								emptySpanL="1" 
+								emptySpanM="1" 
+								breakpointM="300"
+								columnsL="3"
+								columnsM="3">
+								<f:content>
+									<Label 
+										id="label1" 
+										text="AQI">
+									</Label>
+									<Input
+										id="iAQI"
+									    width="60px"
+									    type="Number"
+									    change="iAQIChange"
+									    value="{AQI}"
+										maxLines="0">
+									</Input>
+									<Slider id="sAQI" min="0" max="500" liveChange="sAQILiveChange">
+									</Slider>
+									<Label 
+										id="label2" 
+										text="Temperature">
+									</Label>
+									<Input
+										id="iTmp"
+									    width="60px"
+									    change="iTmpChange"
+									    value="{TMP}"
+										maxLines="0">
+									</Input>
+									<Slider id="sTmp" min="0" max="150" liveChange="sTmpLiveChange">
+									</Slider>
+									<Label 
+										id="label3" 
+										text="Humidity">
+									</Label>
+									<Input
+										id="iHum"
+									    width="60px"
+									    change="iHumChange"
+									    value="{HUM}"
+										maxLines="0">
+									</Input>
+									<Slider id="sHum" min="0" max="150" liveChange="sHumLiveChange">
+									</Slider>
+									<core:ExtensionPoint 
+										name="extIconTabFilterForm1"/>
+								</f:content>
+							</f:SimpleForm>
+                        </content>
+                    </IconTabFilter>
+    				<core:ExtensionPoint
+    				    name="extIconTabFilter"/>
+                </items>
+            </IconTabBar>
+    		<core:ExtensionPoint 
+    		    name="extDetail"/>
+        </content>
+        <footer
+            id="detailFooter">
+            <Toolbar id="detailToolbar">
+                <content>
+                    <ToolbarSpacer
+                        id="toolbarSpacer">
+                    </ToolbarSpacer>
+                    <Button type="Accept" text="Update" icon="sap-icon://upload" press="onAccept" />
+                    <Button type="Reject" text="Cancel" icon="sap-icon://undo" press="onReject" />
+                </content>
+            </Toolbar>
+        </footer>
+    </Page>
+</mvc:View>

@@ -1,0 +1,1 @@
+sap.ui.core.mvc.Controller.extend("live4.view.App", {});

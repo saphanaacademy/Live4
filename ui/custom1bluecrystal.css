@@ -1,0 +1,65 @@
+@customUiSuccessText: green;
+@customUiWarningText: orange;
+@customUiErrorText: red;
+@customUiNoneText: maroon;
+
+.sapMObjLNumberStateSuccess {
+    color: @customUiSuccessText;
+}
+.sapMOHNumberStateSuccess {
+    color: @customUiSuccessText;
+}
+.sapMObjStatusSuccess>.sapMObjStatusText {
+    color: @customUiSuccessText;
+}
+.sapMObjLNumberStateWarning {
+    color: @customUiWarningText;
+}
+.sapMOHNumberStateWarning {
+    color: @customUiWarningText;
+}
+.sapMObjStatusWarning>.sapMObjStatusText {
+    color: @customUiWarningText;
+}
+.sapMObjLNumberStateError {
+    color: @customUiErrorText;
+}
+.sapMOHNumberStateError {
+    color: @customUiErrorText;
+}
+.sapMObjStatusError>.sapMObjStatusText {
+    color: @customUiErrorText;
+}
+.sapMObjLNumberStateNone {
+    color: @customUiNoneText;
+}
+.sapMOHNumberStateNone {
+    color: @customUiNoneText;
+}
+.sapMObjStatusNone>.sapMObjStatusText {
+    color: @customUiNoneText;
+}
+.sapUshellDynamicTile .sapUshellDynamicTileData.sapUshellDynamicTileDataPositive {
+  color: @customUiSuccessText;
+}
+.sapUshellDynamicTile .sapUshellDynamicTileData.sapUshellDynamicTileDataCritical {
+  color: @customUiWarningText;
+}
+.sapUshellDynamicTile .sapUshellDynamicTileData.sapUshellDynamicTileDataNegative {
+  color: @customUiErrorText;
+}
+.sapUshellDynamicTile .sapUshellDynamicTileData.sapUshellDynamicTileDataNeutral {
+  color: @customUiNoneText;
+}
+.sapUshellTileBase .sapUshellTileBaseInfo.sapUshellTileBasePositive {
+  color: @customUiSuccessText;
+}
+.sapUshellTileBase .sapUshellTileBaseInfo.sapUshellTileBaseCritical {
+  color: @customUiWarningText;
+}
+.sapUshellTileBase .sapUshellTileBaseInfo.sapUshellTileBaseNegative {
+  color: @customUiErrorText;
+}
+.sapUshellTileBase .sapUshellTileBaseInfo.sapUshellTileBaseNeutral {
+  color: @customUiNoneText;
+}

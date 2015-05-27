@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta charset="UTF-8">
+
+		<title>live4IoT</title>
+
+		<script id="sap-ui-bootstrap"
+			src="resources/sap-ui-core.js"
+			data-sap-ui-libs="sap.m"
+			data-sap-ui-theme="custom1bluecrystal"
+			data-sap-ui-theme-roots='{"custom1bluecrystal" : "/custom-theme/UI5"}'
+			data-sap-ui-xx-bindingSyntax="complex"
+			data-sap-ui-resourceroots='{"live4IoT": "./"}'>
+		</script>
+
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+
+		<script>
+			sap.ui.getCore().attachInit(function() {
+				new sap.m.Shell({
+					app: new sap.ui.core.ComponentContainer({
+						height : "100%",
+						name : "live4IoT"
+					})
+				}).placeAt("content");
+			});
+		</script>
+	</head>
+
+	<body class="sapUiBody" id="content">
+	</body>
+
+</html>

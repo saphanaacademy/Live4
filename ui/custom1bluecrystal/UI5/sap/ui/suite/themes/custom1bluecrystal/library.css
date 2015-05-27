@@ -1,0 +1,91 @@
+/**
+* Copyright (c) 2013 SAP AG, All Rights Reserved
+*
+* Theming Engine 1.10.0
+* data:{"Path": "UI5.sap/ui/suite.custom1bluecrystal.library", "PathPattern": "/%frameworkId%/%libId%/themes/%themeId%/%fileId%.css", "Version": { "Build":"1.26.8.20150507111051", "Source": "1.26.8", "Engine": "1.10.0"}}
+*/
+
+/******************* FILE /Base/baseLib/baseTheme/base.less *******************/
+/******************* FILE /UI5/sap/ui/core/themes/base/global.less *******************/
+/******************* FILE /UI5/sap/ui/suite/themes/base/library.less *******************/
+/*<SAP_FREETEXT>*/
+/* START "shared.less" */
+/* This CSS shares it rules with all other CSS of this library */
+/* END "shared.less" */
+/* START "TaskCircle.less" */
+/* ============================================= */
+/* CSS for control sap.ui.dev/TaskCircle.control */
+/* ============================================= */
+.sapUiTaskCircle {
+  font-weight: bold;
+  text-align: center;
+  border: 2px solid #bfbfbf;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+  background-color: #f2f2f2;
+  color: #000000;
+}
+/* END "TaskCircle.less" */
+/* START "VerticalProgressIndicator.less" */
+/* ============================================= */
+/* CSS for control sap.ui.suite/VerticalProgressIndicator.control */
+/* ============================================= */
+.sapUiVerticalProgressOuterContainer {
+  border: 2px solid #808080;
+  width: 31px;
+  height: 58px;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.5);
+  background-color: #dddddd;
+}
+.sapUiVerticalProgressInnerContainer {
+  position: relative;
+  background-color: #777777;
+}
+/*</SAP_FREETEXT>*/
+/******************* FILE /Base/baseLib/sap_bluecrystal/base.less *******************/
+/******************* FILE /UI5/sap/ui/core/themes/sap_bluecrystal/global.less *******************/
+/******************* FILE /UI5/sap/ui/suite/themes/sap_bluecrystal/library.less *******************/
+/*<SAP_FREETEXT>*/
+/* START "shared.less" */
+/* This CSS inherits rules from default/shared.css */
+/* END "shared.less" */
+/* START "TaskCircle.less" */
+/* ============================================= */
+/* CSS for control sap.ui.dev/TaskCircle.control */
+/* ============================================= */
+.sapUiTaskCircle {
+  border: 2px solid #ffffff;
+}
+.sapUiTaskCircleColorRed {
+  background-color: #e52929;
+  color: #ffffff;
+}
+.sapUiTaskCircleColorYellow {
+  background-color: #f0ab00;
+  color: #ffffff;
+}
+.sapUiTaskCircleColorGreen {
+  background-color: #007833;
+  color: #ffffff;
+}
+.sapUiTaskCircleColorGray {
+  background-color: #cccccc;
+  color: #444444;
+}
+/* END "TaskCircle.less" */
+/* START "VerticalProgressIndicator.less" */
+/* ============================================= */
+/* CSS for control sap.ui.suite/VerticalProgressIndicator.control */
+/* ============================================= */
+.sapUiVerticalProgressOuterContainer {
+  border: 2px solid #ffffff;
+}
+/*</SAP_FREETEXT>*/
+/******************* FILE /Base/baseLib/custom1bluecrystal/custom.less *******************/
+/*<SAP_FREETEXT_LESS>*/
+/*</SAP_FREETEXT_LESS>*/
+/******************* FILE /Base/baseLib/custom1bluecrystal/base.less *******************/
+/******************* FILE /UI5/sap/ui/core/themes/custom1bluecrystal/global.less *******************/
+/******************* FILE /UI5/sap/ui/suite/themes/custom1bluecrystal/library.less *******************/
+
+
+.sapThemeMetaData-UI5-sap-ui-suite{background-image: url('data:text/plain;utf-8,{"Path": "UI5.sap/ui/suite.custom1bluecrystal.library", "PathPattern": "/%frameworkId%/%libId%/themes/%themeId%/%fileId%.css", "Version": { "Build":"1.26.8.20150507111051", "Source": "1.26.8", "Engine": "1.10.0"}}');}

@@ -1,0 +1,48 @@
+{
+  "welcomeFile": "index.html",
+  "securityConstraints": [
+        {
+            "permission": "live4IoT",
+            "description": "Access Live4 IoT",
+            "protectedPaths": [
+                "/"
+            ]
+        }
+    ],
+  "routes": [
+    {
+      "path": "/destinations/live4",
+      "target": {
+        "type": "destination",
+        "name": "live4"
+      },
+      "description": "live4"
+    },
+    {
+      "path": "/custom-theme",
+      "target": {
+        "type": "application",
+        "name": "custom1bluecrystal"
+      },
+      "description": "Custom Theme"
+    },
+    {
+      "path": "/resources",
+      "target": {
+        "type": "service",
+        "name": "sapui5",
+        "entryPath": "/resources"
+      },
+      "description": "SAPUI5 Resources"
+    },
+    {
+      "path": "/test-resources",
+      "target": {
+        "type": "service",
+        "name": "sapui5",
+        "entryPath": "/test-resources"
+      },
+      "description": "SAPUI5 Test Resources"
+    }
+  ]
+}

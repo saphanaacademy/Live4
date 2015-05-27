@@ -1,0 +1,28 @@
+{
+  "run": [
+    {
+      "filePath": "/live4iot/index.html",
+      "previewMode": 0,
+      "dataMode": 1,
+      "workspace": "withoutWorkspace",
+      "urlParameters": [],
+      "_metadata": {
+        "runnerId": "webapprunner",
+        "id": 6626467,
+        "displayName": "New Web Application 2"
+      }
+    },
+    {
+      "filePath": "/live4IoT/index.html",
+      "previewMode": 0,
+      "dataMode": 1,
+      "workspace": "withoutWorkspace",
+      "urlParameters": [],
+      "_metadata": {
+        "runnerId": "webapprunner",
+        "id": 3793070,
+        "displayName": "New Web Application 1"
+      }
+    }
+  ]
+}

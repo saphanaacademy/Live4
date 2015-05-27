@@ -1,0 +1,28 @@
+{
+  "generation": [
+    {
+      "templateId": "ui5template.fioriMasterDetail",
+      "templateVersion": "1.4.0",
+      "dateTimeStamp": "Wed, 22 Apr 2015 08:09:42 GMT"
+    }
+  ],
+  "mockpreview": {
+    "mockUri": "/destinations/live4/services.xsodata",
+    "metadataFilePath": "",
+    "loadJSONFiles": false,
+    "loadCustomRequests": false,
+    "mockRequestsFilePath": ""
+  },
+  "translation": {
+    "translationDomain": "",
+    "supportedLanguages": "en,fr,de",
+    "defaultLanguage": "en",
+    "defaultI18NPropertyFile": "i18n.properties",
+    "resourceModelName": "i18n"
+  },
+  "hcpdeploy": {
+    "account": "b382adff2",
+    "name": "live4",
+    "lastVersionWeTriedToDeploy": "0.11"
+  }
+}

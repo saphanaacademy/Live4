@@ -1,0 +1,274 @@
+<mvc:View 
+    controllerName="live4.view.Detail"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form">
+    <Page
+        id="detailPage" 
+        navButtonPress="onNavBack" 
+        title="{i18n>detailTitle}" 
+        showNavButton="{device>/isPhone}">
+        <content>
+            <ObjectHeader 
+                id="detailHeader" 
+				title="{NAME1}" 
+				number="{AQI}" 
+				numberState="{
+                      path: 'AQI',
+                      formatter: 'live4.util.Formatter.AQIState'
+                    }"
+				numberUnit="AQI"
+                introActive="false" 
+                titleActive="false" 
+                iconActive="false">
+                <customData 
+                    id="customData3">
+                    <core:CustomData 
+                        id="coreCustomData3" 
+                        key="sapDtResourcePath" 
+                        value="Stores">
+                    </core:CustomData>
+                </customData>
+                <firstStatus
+                    id="detailStatus">
+                    <ObjectStatus 
+                        text="{
+                          path: 'AQI',
+                          formatter: 'live4.util.Formatter.AQIText'
+                        }"
+                        state="{
+                          path: 'AQI',
+                          formatter: 'live4.util.Formatter.AQIState'
+                        }"
+                    />
+                </firstStatus>
+                <attributes id="detailAttributes">
+                  <ObjectAttribute text="{
+                          path: 'TMP',
+                          formatter: 'live4.util.Formatter.TMPText'
+                        }" />
+                  <ObjectAttribute text="{
+                          path: 'HUM',
+                          formatter: 'live4.util.Formatter.HUMText'
+                        }" />
+                </attributes>
+            </ObjectHeader>
+            <IconTabBar 
+                id="idIconTabBar" 
+                expanded="{device>/isNoPhone}">
+                <customData 
+                    id="customData5">
+                    <core:CustomData 
+                        id="coreCustomData5" 
+                        key="sapDtResourcePath" 
+                        value="Stores">
+                    </core:CustomData>
+                </customData>
+    			<items 
+    			    id="detailsItems">
+                    <IconTabFilter 
+                        id="iconTabFilter1" 
+                        key="selfInfo" 
+                        icon="sap-icon://product">
+                        <content>
+                          <Table 
+                            id="iProductsTable"
+                            inset="false"
+                            items="{
+                              path: 'Products',
+                              sorter: {path: 'INVENTORY_PREDICTED_SPARE'}
+                              }">
+                            <columns>
+                              <Column>
+                                <Text text="Product" />
+                              </Column>
+                              <Column hAlign="Right">
+                                <Text text="Inventory" />
+                              </Column>
+                              <Column hAlign="Right">
+                                <Text text="Predicted" />
+                              </Column>
+                              <Column hAlign="Right">
+                                <Text text="Spare" />
+                              </Column>
+                            </columns>
+                            <items>
+                              <ColumnListItem>
+                                <cells>
+                                  <ObjectIdentifier
+                                    text="{MAKTX}" />
+                                  <ObjectNumber
+                                    number="{INVENTORY}"
+                                    />
+                                  <ObjectNumber
+                                    number="{QUANTITY_PREDICTED}"
+                                    />
+                                  <ObjectNumber
+                                    number="{INVENTORY_PREDICTED_SPARE}"
+                                    state="{
+                                            path: 'INVENTORY_PREDICTED_SPARE',
+                                            formatter: 'live4.util.Formatter.spareState'
+                                            }"
+                                    />
+                                </cells>
+                              </ColumnListItem>
+                            </items>
+                          </Table>                            
+                        </content>
+                    </IconTabFilter>
+                    <IconTabFilter 
+                        id="iconTabFilter2" 
+                        key="" 
+                        icon="sap-icon://retail-store">
+                        <content>
+							<f:SimpleForm 
+								id="iconTabFilter2form" 
+								minWidth="1024"
+								editable="false" 
+								layout="ResponsiveGridLayout" 
+								labelSpanL="3" 
+								labelSpanM="3" 
+								emptySpanL="1" 
+								emptySpanM="1"
+								breakpointM="300"
+								columnsL="2"
+								columnsM="2">
+								<f:content>
+									<Label 
+										id="label1" 
+										text="Name">
+									</Label>
+									<Text 
+										id="text1"
+										text="{NAME1}"
+										maxLines="0">
+									</Text>
+									<Label 
+										id="label3" 
+										text="Street">
+									</Label>
+									<Text 
+										id="text3"
+										text="{STRAS}"
+										maxLines="0">
+									</Text>
+									<Label 
+										id="label5" 
+										text="City">
+									</Label>
+									<Text 
+										id="text5"
+										text="{ORT01}"
+										maxLines="0">
+									</Text>
+									<Label 
+										id="label6" 
+										text="State">
+									</Label>
+									<Text 
+										id="text6"
+										text="{REGIO}"
+										maxLines="0">
+									</Text>
+									<Label 
+										id="label4" 
+										text="Zip">
+									</Label>
+									<Text 
+										id="text4"
+										text="{PSTLZ}"
+										maxLines="0">
+									</Text>
+									<Label 
+										id="label7" 
+										text="Country">
+									</Label>
+									<Text 
+										id="text7"
+										text="{LAND1}"
+										maxLines="0">
+									</Text>
+								</f:content>
+							</f:SimpleForm>
+                        </content>
+                    </IconTabFilter>
+                    <IconTabFilter 
+                        id="iconTabFilter3" 
+                        key="selfInfo" 
+                        icon="sap-icon://check-availability">
+                        <content>
+                          <Table 
+                            id="iAvailableProductsTable"
+                            inset="false"
+                            items="{
+                              path: 'AvailableProducts',
+                              sorter: {path: 'INVENTORY_PREDICTED_SPARE'}
+                              }">
+                            <columns>
+                              <Column>
+                                <Text text="Product" />
+                              </Column>
+                              <Column hAlign="Right">
+                                <Text text="Spare" />
+                              </Column>
+                              <Column>
+                                <Text text="Transfer From" />
+                              </Column>
+                              <Column hAlign="Right">
+                                <Text text="Available" />
+                              </Column>
+                            </columns>
+                            <items>
+                              <ColumnListItem>
+                                <cells>
+                                  <ObjectIdentifier
+                                    text="{MAKTX_T}" />
+                                  <ObjectNumber
+                                    number="{INVENTORY_PREDICTED_SPARE}"
+                                    state="{
+                                            path: 'INVENTORY_PREDICTED_SPARE',
+                                            formatter: 'live4.util.Formatter.spareState'
+                                            }"
+                                    />
+                                  <ObjectIdentifier
+                                    text="{NAME1_T}" />
+                                  <ObjectNumber
+                                    number="{INVENTORY_PREDICTED_SPARE_T}"
+                                    state="{
+                                            path: 'INVENTORY_PREDICTED_SPARE_T',
+                                            formatter: 'live4.util.Formatter.spareState'
+                                            }"
+                                    />
+                                </cells>
+                              </ColumnListItem>
+                            </items>
+                          </Table>                            
+                        </content>
+                    </IconTabFilter>
+                    <core:ExtensionPoint
+    				    name="extIconTabFilter"/>
+                </items>
+            </IconTabBar>
+    		<core:ExtensionPoint 
+    		    name="extDetail"/>
+        </content>
+        <footer
+            id="detailFooter">
+            <Toolbar id="detailToolbar">
+                <content>
+                    <ToolbarSpacer
+                        id="toolbarSpacer">
+                    </ToolbarSpacer>
+                    <Button type="Emphasized" text="Transfer Inventory" icon="sap-icon://add-product" press="onTransfer" />
+                    <Button 
+                        id="actionButton" 
+                        press="openActionSheet" 
+                        icon="sap-icon://action">
+                    </Button>
+                </content>
+            </Toolbar>
+        </footer>
+    </Page>
+</mvc:View>

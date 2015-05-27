@@ -1,0 +1,109 @@
+<mvc:View 
+    controllerName="live4IoT.view.Master"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:footerbar="sap.ushell.ui.footerbar">
+    <Page 
+        id="masterPage" 
+        title="{i18n>masterTitle}">
+        <subHeader
+            id="masterSubHeader">
+            <Bar 
+                id="searchBar">
+                <contentMiddle>
+                    <SearchField 
+                        id="searchField" 
+                        search="onSearch" 
+                        width="100%" 
+                        placeholder="{i18n>masterSearchPlaceholder}" 
+                        showRefreshButton="{device>/isNoTouch}" 
+                        tooltip="{i18n>masterSearchTooltip}">
+                    </SearchField>
+                </contentMiddle>
+            </Bar>
+        </subHeader>
+        <content>
+            <PullToRefresh id="pullToRefresh" refresh="handleRefresh" />
+            <List 
+                id="list" 
+                select="onSelect" 
+                mode="{device>/listMode}" 
+                noDataText="{i18n>masterListNoDataText}" 
+                growing="true" 
+                growingScrollToLoad="true" 
+				items="{
+                      path: '/Stores',
+                      sorter: {path: 'ORT01'}
+                      }">
+                <customData 
+                    id="customData1">
+                    <core:CustomData 
+                        id="coreCustomData1" 
+                        key="sapDtResourcePath" 
+                        value="Stores">
+                    </core:CustomData>
+                </customData>
+                <items
+                    id="masterList">
+                    <ObjectListItem 
+                        id="mainListItem" 
+                        press="onSelect" 
+                        type="{device>/listItemType}" 
+                        counter="0" 
+						title="CBSA {ORT01}" 
+						number="{AQI}"
+						numberState="{
+                              path: 'AQI',
+                              formatter: 'live4IoT.util.Formatter.AQIState'
+                            }"
+						numberUnit="AQI"
+                        markFavorite="false" 
+                        markFlagged="false" 
+                        showMarkers="false">
+                        <firstStatus>
+                          <ObjectStatus
+                            text="{
+                              path: 'AQI',
+                              formatter: 'live4IoT.util.Formatter.AQIText'
+                            }"
+                            state="{
+                              path: 'AQI',
+                              formatter: 'live4IoT.util.Formatter.AQIState'
+                            }" />
+                        </firstStatus>
+                        <attributes>
+                          <ObjectAttribute text="{
+                                  parts: [
+                                    {path: 'TMP'},
+                                    {path: 'HUM'}
+                                    ],
+                                  formatter: 'live4IoT.util.Formatter.TMPHUMText'
+                                }" />
+                        </attributes>
+                        <customData 
+                            id="customData2">
+                            <core:CustomData 
+                                id="coreCustomData2" 
+                                key="sapDtResourcePath" 
+								value="Stores">
+                            </core:CustomData>
+                        </customData>
+                        <core:ExtensionPoint 
+                            name="extListItemInfo"/>
+                    </ObjectListItem>
+                </items>
+            </List>
+        </content>
+        <footer id="masterFooter">
+            <Toolbar id="masterToolbar">
+                <content>
+                    <ToolbarSpacer
+                        id="toolbarSpacer">
+                    </ToolbarSpacer>
+                    <Button type="Reject" text="Reset" icon="sap-icon://media-rewind" press="onReset" />
+                </content>
+            </Toolbar>
+        </footer>
+    </Page>
+</mvc:View>

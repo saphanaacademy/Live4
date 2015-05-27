@@ -1,0 +1,18 @@
+service {
+    "LIVE4"."T001W_WS" as "Stores" navigates ("Store2Products" as "Products", "Store2AvailableProducts" as "AvailableProducts") create forbidden delete forbidden;
+    "LIVE4"."PRODUCT_INVENTORY_PREDICTED" as "Products" key generate local "ID" navigates ("Product2Sales" as "Sales") create forbidden update forbidden delete forbidden;
+    "LIVE4"."PRODUCT_INVENTORY_PREDICTED_ALERTS" as "AvailableProducts" key generate local "ID" create forbidden update forbidden delete forbidden;
+    "LIVE4"."SALES_PER_LOCATION_PER_PRODUCT" as "Sales" key ("ROW_NUM") create forbidden update forbidden delete forbidden;
+    association "Store2Products"
+        principal "Stores"("WERKS") multiplicity "1" 
+        dependent "Products"("WERKS") multiplicity "*"
+        ;
+    association "Store2AvailableProducts"
+        principal "Stores"("WERKS") multiplicity "1" 
+        dependent "AvailableProducts"("WERKS") multiplicity "*"
+        ;
+    association "Product2Sales"
+        principal "Products" ("WERKS", "MATNR") multiplicity "1" 
+        dependent "Sales" ("WERKS", "MATNR") multiplicity "*"
+        ;
+}

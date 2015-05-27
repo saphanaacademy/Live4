@@ -1,0 +1,34 @@
+/**
+* Copyright (c) 2013 SAP AG, All Rights Reserved
+*
+* Theming Engine 1.10.0
+* data:{"Path": "UR.baseLib.custom1bluecrystal.standards", "PathPattern": "/%frameworkId%/%libId%/%themeId%/%fileId%.css", "Version": { "Build":"10.30.0.230340.20150507111049", "Source": "10.30.0.230340.0", "Engine": "1.10.0"}}
+*/
+
+
+/**
+* Base.baseLib.custom1bluecrystal.custom
+* 10.30.0.230340.0
+*/
+
+
+/**
+* Base.baseLib.custom1bluecrystal.base
+* 10.30.0.230340.0
+*/
+
+
+/**
+* UR.baseLib.custom1bluecrystal.base
+* 10.30.0.230340.0
+*/
+
+
+/**
+* UR.baseLib.custom1bluecrystal.standards
+* 10.30.0.230340.0
+*/
+
+
+
+.sapThemeMetaData-UR-baseLib{background-image: url('data:text/plain;utf-8,{"Path": "UR.baseLib.custom1bluecrystal.standards", "PathPattern": "/%frameworkId%/%libId%/%themeId%/%fileId%.css", "Version": { "Build":"10.30.0.230340.20150507111049", "Source": "10.30.0.230340.0", "Engine": "1.10.0"}}');}

@@ -1,0 +1,67 @@
+/**
+* Copyright (c) 2013 SAP AG, All Rights Reserved
+*
+* Theming Engine 1.10.0
+* data:{"Path": "UI5.sap/ui/richtexteditor.custom1bluecrystal.library", "PathPattern": "/%frameworkId%/%libId%/themes/%themeId%/%fileId%.css", "Version": { "Build":"1.26.8.20150507111051", "Source": "1.26.8", "Engine": "1.10.0"}}
+*/
+
+/******************* FILE /Base/baseLib/baseTheme/base.less *******************/
+/******************* FILE /UI5/sap/ui/core/themes/base/global.less *******************/
+/******************* FILE /UI5/sap/ui/richtexteditor/themes/base/library.less *******************/
+/*<SAP_FREETEXT>*/
+/* START "RichTextEditor.css" */
+.defaultSkin {
+  color: #000000;
+  background-color: #f2f2f2;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+.sapUiRTE {
+  display: inline-block;
+}
+html[dir=rtl] .sapUiRTE .defaultSkin table {
+  direction: rtl;
+}
+/* Styling TinyMCE */
+.sapUiRTE .defaultSkin table.mceToolbar {
+  margin-left: 5px;
+}
+.sapUiRTE.sapUiRTELegacyTheme .defaultSkin .mceIcon,
+.sapUiRTE.sapUiRTELegacyTheme .defaultSkin .mceSplitButton span.mceAction {
+  background-image: url("../../../../../../UI5/sap/ui/richtexteditor/themes/base/icons.png");
+}
+/* bugfix for IE8 with certain zoom factors */
+html[data-sap-ui-browser="ie8"] .sapUiRTE .defaultSkin .mceIcon.mce_undo {
+  width: 19px;
+  margin-right: 1px;
+}
+.sapUiRTE .defaultSkin table.mceLayout tr.mceFirst > td.mceFirst {
+  background-color: #f2f2f2;
+  border-top: 1px solid #cccccc;
+}
+.sapUiRTE .defaultSkin td.mceIframeContainer {
+  border-top: 1px solid #cccccc;
+}
+.sapUiRTE .defaultSkin.mceEditor table.mceLayout {
+  border-color: #cccccc;
+}
+.sapUiRTE .defaultSkin table.mceLayout tr.mceLast td.mceLast {
+  border-bottom: 1px solid #cccccc;
+}
+.sapUiRTE .defaultSkin table.mceLayout tr.mceFirst td,
+.sapUiRTE .defaultSkin table {
+  background-color: transparent;
+}
+/*</SAP_FREETEXT>*/
+/******************* FILE /Base/baseLib/sap_bluecrystal/base.less *******************/
+/******************* FILE /UI5/sap/ui/core/themes/sap_bluecrystal/global.less *******************/
+/******************* FILE /UI5/sap/ui/richtexteditor/themes/sap_bluecrystal/library.less *******************/
+/******************* FILE /Base/baseLib/custom1bluecrystal/custom.less *******************/
+/*<SAP_FREETEXT_LESS>*/
+/*</SAP_FREETEXT_LESS>*/
+/******************* FILE /Base/baseLib/custom1bluecrystal/base.less *******************/
+/******************* FILE /UI5/sap/ui/core/themes/custom1bluecrystal/global.less *******************/
+/******************* FILE /UI5/sap/ui/richtexteditor/themes/custom1bluecrystal/library.less *******************/
+
+
+.sapThemeMetaData-UI5-sap-ui-richtexteditor{background-image: url('data:text/plain;utf-8,{"Path": "UI5.sap/ui/richtexteditor.custom1bluecrystal.library", "PathPattern": "/%frameworkId%/%libId%/themes/%themeId%/%fileId%.css", "Version": { "Build":"1.26.8.20150507111051", "Source": "1.26.8", "Engine": "1.10.0"}}');}

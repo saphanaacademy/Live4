@@ -1,0 +1,36 @@
+{
+    "application": {
+        "id": "",
+        "title": "live4IoT",
+        "description": "Live4 IoT",
+        "type": "SAP_UI5_Component",
+        "componentUrl": "/",
+        "navigationComponentName": "live4IoT",
+        "intentSemanticObject": "",
+        "intentAction": "",
+        "html5ApplicationName": "live4iot",
+        "HCPParentApplicationName": ""
+    },
+    "assignment": {
+        "groups": [
+            "31204897-9b56-404f-8bd3-1f37c82c40a9-1429707902468"
+        ],
+        "contentPackages": [
+            "e5a6eb64-8507-4a73-a7eb-a67b130c0ae6-1429707866843"
+        ],
+        "categories": [
+            "e8e45e43-ba0d-408a-8a58-b31169fea113-1429707827519"
+        ]
+    },
+    "tile": {
+        "type": "StaticTile",
+        "title": "Live4 IoT",
+        "subtitle": "Live4 Simulator",
+        "searchKeywords": "Live4 IoT,Live4 Simulator",
+        "displayIconUrl": "sap-icon://web-cam",
+        "displayInfoText": "",
+        "size": "1x1",
+        "serviceURL": "",
+        "refreshInterval": ""
+    }
+}
