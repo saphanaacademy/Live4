@@ -1,4 +1,5 @@
--- run this as LIVE4 user
+-- run this as LIVE4 user to create the TW001_WS table
+-- this table is used to find the closest weather stations for each store location as well as the highest weather reading
 
 CREATE COLUMN TABLE LIVE4.T001W_WS (  
 	 ROWNUM INTEGER,
