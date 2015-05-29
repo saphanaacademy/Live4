@@ -33,21 +33,24 @@ FROM
 	 "aqi" AS AQI,
 	 "date_local" AS DATELOCAL,
 	 "state_code" * 10000000 + "county_code" * 10000 + "site_num" AS SITENUM
-	FROM LIVE4."DataLake_AQI"
+	FROM 
+	 LIVE4."DataLake_AQI"
  ) DLA,
  (
 	SELECT 
 	 "1st_max_value" AS TMP,
 	 "date_local" AS DATELOCAL,
 	 "state_code" * 10000000 + "county_code" * 10000 + "site_num" AS SITENUM
-	FROM LIVE4."DataLake_Temperature"
+	FROM 
+	 LIVE4."DataLake_Temperature"
  ) DLT,
  (
 	SELECT 
 	 "1st_max_value" AS HUM,
 	 "date_local" AS DATELOCAL,
 	 "state_code" * 10000000 + "county_code" * 10000 + "site_num" AS SITENUM
-	FROM LIVE4."DataLake_Humidity"
+	FROM 
+	 LIVE4."DataLake_Humidity"
  ) DLH
 
 WHERE  	
