@@ -1,4 +1,4 @@
--- run this as LIVE4 user to create the T001W_WS table
+-- run this as LIVE4 user to create the SALES_PER_LOCATION_PER_PRODUCT view
 -- this view is used gather product sales from a store by date also showing the weather readings for that date
 -- this data will in turn be used with Predictive Analysis
 
