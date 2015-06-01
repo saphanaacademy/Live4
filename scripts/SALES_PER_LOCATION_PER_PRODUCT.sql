@@ -2,7 +2,7 @@
 -- this view is used gather product sales from a store by date also showing the weather readings for that date
 -- this data will in turn be used with Predictive Analysis
 
-CREATE VIEW "LIVE4"."SALES_PER_LOCATION_PER_PRODUCT" AS 
+CREATE VIEW LIVE4.SALES_PER_LOCATION_PER_PRODUCT AS 
 SELECT
  ROW_NUMBER() OVER (ORDER BY MANDT, ERDAT, VBAP.WERKS, MATNR) AS ROW_NUM,
  TW.MANDT,
