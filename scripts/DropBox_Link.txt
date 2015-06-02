@@ -1,0 +1,17 @@
+// DropBox Link //
+https://www.dropbox.com/work/SAP%20HANA%20Academy/Academy%20Live%20External%20share/live4
+
+-- Live4_SDI_Backup_for_WDW.zip
+5 datalake local tables (with 2014 data only), which can be imported with Web-based Development Workbench incase Hadoop isn't online, or students don't have their own Hadoop.
+
+-- Live4_ERP_Backup_for_WDW.zip
+4 ERP local tables, which can be imported with Web-based Development Workbench incase ERP isn't online, or students don't have their own ERP.
+
+-- LIVE4_SDI_TABLES_BACKUP.rar
+5 datalake local tables (with 2014 data only), which can be imported with SAP HANA Studio/Eclipse incase Hadoop isn't online, or students don't have their own Hadoop.
+
+-- LIVE4_ERP_TABLES_BACKUP.rar
+4 ERP local tables, which can be imported with SAP HANA Studio/Eclipse incase ERP isn't online, or students don't have their own ERP.
+
+-- Live4_Hadoop_JARs.rar
+4 Hadoop JAR files for Hive 0.12.0 for use with SAP HANA Data Provisioning Agent
