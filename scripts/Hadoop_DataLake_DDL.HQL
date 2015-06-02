@@ -1,7 +1,7 @@
 --_Hive_DDL_--
 -- HIVE DDLs to create Datalake tables in HDP 1.3.
 -- Data for 2014 ONLY !!!!!!!
--- Use data in hadoop_data_csv.zip
+-- Use data in hadoop_data_csv.rar
 
 drop database epa cascade;
 
