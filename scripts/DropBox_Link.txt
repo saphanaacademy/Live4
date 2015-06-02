@@ -18,3 +18,7 @@ https://www.dropbox.com/work/SAP%20HANA%20Academy/Academy%20Live%20External%20sh
 
 -- live4CensusData.zip
 Census Data used for Map Demo in Live4
+
+-- hadoop_data_csv.rar
+HIVE DDLs to create Datalake tables in HDP 1.3. Data for 2014 ONLY !!!!!!!
+
