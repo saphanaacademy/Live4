@@ -1,0 +1,19 @@
+The live4map application archive can be downloaded from the following location:
+
+https://www.dropbox.com/s/sddzuqi9s0ihqih/live4course_live4map.zip?dl=0
+
+The following syntax is used to set up the Anonymous user for the live4map:
+
+-- run as an admin user in the Eclipse IDE
+
+-- CREATE ANONYMOUS USER
+CREATE USER ANONYMOUS PASSWORD Password1;
+ALTER USER ANONYMOUS DISABLE PASSWORD LIFETIME;
+
+
+-- run as LIVE4 user in the Web Dev Workbench > Catalog
+
+-- GRANT ACCESS TO APPLICATION SCHEMAS
+GRANT SELECT ON SCHEMA SAP_SPATIAL_POSTAL TO ANONYMOUS;
+GRANT SELECT ON SCHEMA YOURWORLD TO ANONYMOUS;
+GRANT SELECT ON SCHEMA LIVE4 TO ANONYMOUS;
