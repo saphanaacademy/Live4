@@ -49,7 +49,6 @@ FROM
 	 "state_code" * 10000000 + "county_code" * 10000 + "site_num" AS SITENUM
 	FROM LIVE4."DataLake_Humidity"
  ) DLH
-
 WHERE  	
  TW.WERKS = VBAP.WERKS AND 
  DLA.DATELOCAL = VBAP.ERDAT AND
