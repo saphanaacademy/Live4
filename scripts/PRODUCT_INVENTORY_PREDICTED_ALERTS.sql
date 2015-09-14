@@ -2,6 +2,8 @@
 -- this view finds the closest store that can transfer the required inventory for a particular product
 -- this view would be run after running Predictive Analysis
 
+DROP VIEW LIVE4.PRODUCT_INVENTORY_PREDICTED_ALERTS;
+
 CREATE VIEW LIVE4.PRODUCT_INVENTORY_PREDICTED_ALERTS  AS 
 SELECT * FROM
 (
