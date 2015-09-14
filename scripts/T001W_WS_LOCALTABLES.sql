@@ -1,3 +1,9 @@
+-- run this as LIVE4 user to create the T001W_WS table
+-- this table is used to find the closest weather stations for each store location as well as the highest weather reading
+
+-- this table is similar to the LIVE4.T001W_WS table but does not use Hadoop tables
+-- it is used with local HDB tables instead
+
 DROP TABLE LIVE4.T001W_WS;
 
 CREATE COLUMN TABLE LIVE4.T001W_WS (
