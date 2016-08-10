@@ -1,5 +1,5 @@
 // DropBox Link //
-https://www.dropbox.com/work/SAP%20HANA%20Academy/Academy%20Live%20External%20share/live4
+https://www.dropbox.com/sh/v9pqgfucp5dxkhn/AACyb3sca0v89XEYoXHqkKowa?dl=0
 
 -- Live4_SDI_Backup_for_WDW.zip
 5 datalake local tables (with 2014 data only), which can be imported with Web-based Development Workbench incase Hadoop isn't online, or students don't have their own Hadoop.
